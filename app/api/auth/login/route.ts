@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
-import { sendSecurityAlert } from '@/lib/email';
+import { sendSecurityAlert } from '@/lib/postmark';
 import { comparePassword, findUserByEmail, generateToken, getDeviceInfo } from '@/lib/auth';
 
 export async function POST(request: NextRequest) {
